@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/itemBengkel_adapter"
+    >
+
+    <View
+        android:id="@+id/itemBengkel_lineDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider"
+        />
+
+    <RelativeLayout
+        android:id="@+id/itemBengkel_layoutContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemBengkel_lineDivider"
+        android:padding="10dp"
+        >
+        <TextView
+            android:id="@+id/itemBengkel_merk"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="MERK"
+            android:textSize="14sp"
+            android:padding="2dp"
+            android:textColor="#FFFFFF"
+            android:gravity="center"
+            android:background="@drawable/label_yamaha"
+            />
+
+        <TextView
+            android:id="@+id/itemBengkel_namaBengkel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bengkel 1"
+            android:textColor="@color/primaryText"
+            android:layout_toRightOf="@id/itemBengkel_merk"
+            android:layout_toLeftOf="@id/itemBengkel_jarak"
+            android:layout_marginLeft="10dp"
+            android:textSize="14sp"
+            />
+
+        <TextView
+            android:id="@+id/itemBengkel_jalan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jl. Bengkel No. 1"
+            android:textColor="@color/secondaryText"
+            android:layout_toRightOf="@id/itemBengkel_merk"
+            android:layout_toLeftOf="@id/itemBengkel_jarak"
+            android:layout_below="@id/itemBengkel_namaBengkel"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            />
+
+        <TextView
+            android:id="@+id/itemBengkel_jarak"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="1 Km"
+            android:textColor="@color/primaryText"
+            android:gravity="right"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
