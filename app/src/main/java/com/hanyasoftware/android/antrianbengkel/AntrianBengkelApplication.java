@@ -26,7 +26,7 @@ public class AntrianBengkelApplication extends Application {
                 .build();
 
         dataComponent = DaggerIDataComponent.builder()
-                .dataModule(new DataModule("http://samservis.hanyasoftware.com/api/"))
+                .dataModule(new DataModule("http://sambengkel.com/api/"))
                 .build();
 
         mapperComponent = DaggerIMapperComponent.create();

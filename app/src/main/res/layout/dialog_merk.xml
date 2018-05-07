@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:id="@+id/dialogMerk_view"
+    >
+
+    <CheckBox
+        android:id="@+id/dialogMerk_honda"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Honda"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider"
+        />
+
+    <CheckBox
+        android:id="@+id/dialogMerk_yamaha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Yamaha"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider"
+        />
+
+    <CheckBox
+        android:id="@+id/dialogMerk_suzuki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Suzuki"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider"
+        />
+
+    <CheckBox
+        android:id="@+id/dialogMerk_kawasaki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kawasaki"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        />
+
+</LinearLayout>

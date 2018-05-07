@@ -37,6 +37,9 @@ public class BengkelResponse {
     @SerializedName("ktg_nama")
     @Expose
     private String ktgNama;
+    @SerializedName("distance")
+    @Expose
+    private String distance;
 
     public String getBngId() {
         return bngId;
@@ -124,5 +127,13 @@ public class BengkelResponse {
 
     public void setKtgNama(String ktgNama) {
         this.ktgNama = ktgNama;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }

@@ -1,7 +1,10 @@
 package com.hanyasoftware.android.antrianbengkel.di.module;
 
+import com.hanyasoftware.android.antrianbengkel.repository.transformer.AntrianResponseToAntrianBengkel;
 import com.hanyasoftware.android.antrianbengkel.repository.transformer.BengkelResponseToBengkel;
 import com.hanyasoftware.android.antrianbengkel.repository.transformer.BengkelToBengkelAdapter;
+import com.hanyasoftware.android.antrianbengkel.repository.transformer.MotorResponseToMotor;
+import com.hanyasoftware.android.antrianbengkel.repository.transformer.MotorToAntrianAdapter;
 
 import javax.inject.Singleton;
 
@@ -21,6 +24,24 @@ public class MapperModule {
     @Singleton
     BengkelToBengkelAdapter provideBengkelToBengkelAdapter() {
         return new BengkelToBengkelAdapter();
+    }
+
+    @Provides
+    @Singleton
+    MotorResponseToMotor provideMotorResponseToMotor() {
+        return new MotorResponseToMotor();
+    }
+
+    @Provides
+    @Singleton
+    AntrianResponseToAntrianBengkel provideAntrianResponseToAntrianBengkel(MotorResponseToMotor motorResponseToMotor) {
+        return new AntrianResponseToAntrianBengkel(motorResponseToMotor);
+    }
+
+    @Provides
+    @Singleton
+    MotorToAntrianAdapter provideMotorToAntrianAdapter() {
+        return new MotorToAntrianAdapter();
     }
 
 }

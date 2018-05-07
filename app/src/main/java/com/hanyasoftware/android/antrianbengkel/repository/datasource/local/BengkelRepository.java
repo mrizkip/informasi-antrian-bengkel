@@ -22,8 +22,9 @@ public class BengkelRepository {
         this.bengkelResponseToBengkel = bengkelResponseToBengkel;
     }
 
-    public Observable<List<Bengkel>> fetchAllBengkel() {
-        return iFetchBengkel.fetchAllBengkel()
+    public Observable<List<Bengkel>> fetchAllBengkel(String latitude, String longitude) {
+        String radius = "3";
+        return iFetchBengkel.fetchAllBengkel(latitude, longitude, radius)
                 .toObservable()
                 .map(bengkelResponseToBengkel::transform)
                 .subscribeOn(Schedulers.io())

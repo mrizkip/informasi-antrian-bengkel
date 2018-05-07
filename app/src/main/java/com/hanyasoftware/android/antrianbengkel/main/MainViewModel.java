@@ -18,25 +18,20 @@ import retrofit2.adapter.rxjava2.Result;
 public class MainViewModel extends ViewModel {
 
     private final BengkelRepository bengkelRepository;
-    private final MutableLiveData<List<Bengkel>> listBenkel;
+    private MutableLiveData<List<Bengkel>> listBenkel;
 
     public MainViewModel(BengkelRepository bengkelRepository) {
         this.bengkelRepository = bengkelRepository;
         listBenkel = new MutableLiveData<>();
-
-        fetchAllBengkel();
     }
 
-    private void fetchAllBengkel() {
-        bengkelRepository.fetchAllBengkel()
+    public LiveData<List<Bengkel>> getBengkelList(String latitude, String longitude) {
+        bengkelRepository.fetchAllBengkel(latitude, longitude)
                 .subscribe(bengkels -> {
                     this.listBenkel.postValue(bengkels);
                 }, throwable -> {
 
                 });
-    }
-
-    public LiveData<List<Bengkel>> getBengkelList() {
         return listBenkel;
     }
 
@@ -56,6 +51,5 @@ public class MainViewModel extends ViewModel {
             return (T) new MainViewModel(bengkelRepository);
         }
     }
-
 
 }

@@ -12,6 +12,7 @@ public class Bengkel {
     private String bngKtgId;
     private String ktgId;
     private String ktgNama;
+    private String distance;
 
     public String getBngId() {
         return bngId;
@@ -99,5 +100,13 @@ public class Bengkel {
 
     public void setKtgNama(String ktgNama) {
         this.ktgNama = ktgNama;
+    }
+
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
     }
 }

@@ -2,7 +2,9 @@ package com.hanyasoftware.android.antrianbengkel.di.module;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.hanyasoftware.android.antrianbengkel.repository.datasource.api.ICountAntrian;
 import com.hanyasoftware.android.antrianbengkel.repository.datasource.api.IFetchBengkel;
+import com.hanyasoftware.android.antrianbengkel.repository.datasource.api.IListAntrian;
 import com.hanyasoftware.android.antrianbengkel.repository.datasource.local.BengkelRepository;
 
 import javax.inject.Singleton;
@@ -71,6 +73,18 @@ public class DataModule {
     @Singleton
     public IFetchBengkel provideIFetchBengkel(Retrofit retrofit) {
         return retrofit.create(IFetchBengkel.class);
+    }
+
+    @Provides
+    @Singleton
+    public ICountAntrian provideICountAntrian(Retrofit retrofit) {
+        return retrofit.create(ICountAntrian.class);
+    }
+
+    @Provides
+    @Singleton
+    public IListAntrian provideIListAntrian(Retrofit retrofit) {
+        return retrofit.create(IListAntrian.class);
     }
 
 

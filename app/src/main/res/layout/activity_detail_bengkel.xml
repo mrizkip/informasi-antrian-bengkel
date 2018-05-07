@@ -11,22 +11,59 @@
     <include layout="@layout/view_toolbar" />
 
     <TextView
+        android:id="@+id/detailBengkel_textAlamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamat"
+        android:textColor="@color/primaryText"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_below="@id/toolbar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/detailBengkel_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Alamatnya"
+        android:textSize="14sp"
+        android:textColor="@color/primaryText"
+        android:layout_below="@id/detailBengkel_textAlamat"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <View
+        android:id="@+id/detailBengkel_lineDividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@drawable/line_divider"
+        android:layout_below="@id/detailBengkel_alamat"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
         android:id="@+id/detailBengkel_textAntrian"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/toolbar"
+        android:layout_below="@id/detailBengkel_lineDividerTop"
         android:text="Jumlah Antrian"
         android:textColor="@color/primaryText"
         android:textSize="16sp"
+        android:textStyle="bold"
         android:padding="10dp"
+        android:layout_toLeftOf="@id/detailBengkel_jumlahAntrian"
         />
 
     <TextView
         android:id="@+id/detailBengkel_jumlahAntrian"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
-        android:text="10"
-        android:layout_below="@id/toolbar"
+        android:text="0"
+        android:layout_below="@id/detailBengkel_lineDividerTop"
         android:gravity="end"
         android:padding="10dp"
         android:textColor="@color/primaryText"
@@ -42,28 +79,60 @@
         android:layout_below="@id/detailBengkel_textAntrian"
         />
 
+    <TextView
+        android:id="@+id/detailBengkel_antrian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Antrian"
+        android:textSize="16sp"
+        android:textColor="@color/primaryText"
+        android:textStyle="bold"
+        android:layout_below="@id/detailBengkel_lineDivider1"
+        android:layout_toLeftOf="@id/detailBengkel_noAntrian"
+        android:layout_marginLeft="10sp"
+        android:layout_marginStart="10sp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/detailBengkel_noAntrian"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Nomor Antrian"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/primaryText"
+        android:gravity="end"
+        android:layout_below="@id/detailBengkel_lineDivider1"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/detailBengkel_recyclerViewAntrian"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/detailBengkel_lineDivider1"
+        android:layout_height="match_parent"
+        android:layout_below="@id/detailBengkel_antrian"
+        android:layout_above="@id/detailBengkel_buttonMaps"
         android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
         />
 
     <Button
         android:id="@+id/detailBengkel_buttonMaps"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detailBengkel_recyclerViewAntrian"
+        android:layout_alignParentBottom="true"
         android:text="LIHAT PADA MAPS"
         android:textColor="@color/white"
         android:backgroundTint="@color/colorPrimary"
         android:layout_marginLeft="50dp"
         android:layout_marginRight="50dp"
+        android:layout_marginBottom="16dp"
         android:drawableLeft="@drawable/ic_map_black_24dp"
         android:drawableTint="@color/white"
         android:paddingLeft="20dp"
         />
-
 
 </RelativeLayout>

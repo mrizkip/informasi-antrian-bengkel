@@ -26,6 +26,7 @@ public class BengkelResponseToBengkel extends BaseLayerDataTransformer<BengkelRe
         bengkel.setBngKtgId(from.getBngKtgId());
         bengkel.setKtgId(from.getKtgId());
         bengkel.setKtgNama(from.getKtgNama());
+        bengkel.setDistance(from.getDistance().substring(0,3));
         return bengkel;
     }
 }

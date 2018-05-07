@@ -19,13 +19,13 @@ public class BengkelAdapter extends AbstractItem<BengkelAdapter, BengkelAdapter.
     private String namaBengkel;
     private String alamatBengkel;
     private String antrianBengkel;
-    private String jarakBengkel;
     private String bngLatitude;
     private String bngLongitude;
     private String kategoriNama;
     private String bngHariBuka;
     private String bngJamBuka;
     private String bngJamTutup;
+    private String distance;
 
     public String getIdBengkel() {
         return idBengkel;
@@ -57,14 +57,6 @@ public class BengkelAdapter extends AbstractItem<BengkelAdapter, BengkelAdapter.
 
     public void setAntrianBengkel(String antrianBengkel) {
         this.antrianBengkel = antrianBengkel;
-    }
-
-    public String getJarakBengkel() {
-        return jarakBengkel;
-    }
-
-    public void setJarakBengkel(String jarakBengkel) {
-        this.jarakBengkel = jarakBengkel;
     }
 
     public String getBngLatitude() {
@@ -115,6 +107,14 @@ public class BengkelAdapter extends AbstractItem<BengkelAdapter, BengkelAdapter.
         this.bngJamTutup = bngJamTutup;
     }
 
+    public String getDistance() {
+        return distance;
+    }
+
+    public void setDistance(String distance) {
+        this.distance = distance;
+    }
+
     @NonNull
     @Override
     public BengkelAdapter.ViewHolder getViewHolder(View v) {
@@ -151,7 +151,7 @@ public class BengkelAdapter extends AbstractItem<BengkelAdapter, BengkelAdapter.
         public void bindView(BengkelAdapter item, List<Object> payloads) {
             nama.setText(item.getNamaBengkel());
             jalan.setText(item.getAlamatBengkel());
-            jarak.setText(item.getJarakBengkel() + " Km");
+            jarak.setText(item.getDistance() + " Km");
             if (item.getKategoriNama().equalsIgnoreCase("HONDA")) {
                 merk.setText("HONDA");
                 merk.setBackgroundResource(R.drawable.label_honda);
