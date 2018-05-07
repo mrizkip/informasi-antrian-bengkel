@@ -24,6 +24,7 @@ public class BengkelToBengkelAdapter extends BaseLayerDataTransformer<Bengkel, B
         data.setBngHariBuka(from.getBngHariBuka());
         data.setBngJamBuka(from.getBngJamBuka());
         data.setBngJamTutup(from.getBngJamTutup());
+        data.setDistance(from.getDistance());
         return data;
     }
 }
